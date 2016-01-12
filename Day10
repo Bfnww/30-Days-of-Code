@@ -1,0 +1,14 @@
+import sys
+T = int(input())
+for i in sys.stdin:
+    i = int(i.strip())
+    ibin =[]
+    if i==0:
+        print(0)
+    else:
+        while i>0:
+            mod = i%2
+            ibin.append(mod)
+            i = int(i/2)
+        ibin.reverse()
+        print(''.join(map(str,ibin)))
