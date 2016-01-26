@@ -1,0 +1,15 @@
+# return date
+Rd = input().split()
+Rd = [int(d) for d in Rd]
+# Due date
+Dd = input().split()
+Dd = [int(d) for d in Dd]
+
+if Rd[2]> Dd[2]:
+    print(10000)
+elif (Rd[1]>Dd[1]) & (Rd[2]==Dd[2]):
+    print(500*(Rd[1]-Dd[1]))
+elif (Rd[0]>Dd[0]) & (Rd[1]==Dd[1]):
+    print(15*(Rd[0]-Dd[0]))
+else:
+    print(0)
