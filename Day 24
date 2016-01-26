@@ -1,0 +1,53 @@
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None 
+class Solution: 
+    def insert(self,head,data):
+            p = Node(data)           
+            if head==None:
+                head=p
+            elif head.next==None:
+                head.next=p
+            else:
+                start=head
+                while(start.next!=None):
+                    start=start.next
+                start.next=p
+            return head  
+    def display(self,head):
+        current = head
+        while current:
+            print(current.data,end=' ')
+            current = current.next
+    def removeDuplicates(self,head):
+        #Write your code here
+        current = head
+        while current:
+            # print(current.data)
+            # if reaching the last element
+            if current.next == None:
+                return head
+            else:
+                # compare the current element with the next element
+                currentnext = current.next
+                # go through all the next elements that are the same as the current one
+                while current.data == currentnext.data:
+                    if currentnext.next != None:
+                        currentnext = currentnext.next
+                    else:
+                        # handle the case in which there is only one unique element
+                        current.next = None
+                        return head
+                current.next = currentnext
+                current = current.next
+                
+  
+mylist= Solution()
+T=int(input())
+head=None
+for i in range(T):
+    data=int(input())
+    head=mylist.insert(head,data)    
+head=mylist.removeDuplicates(head)
+mylist.display(head); 
