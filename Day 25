@@ -1,0 +1,26 @@
+import math as m
+T = int(input())
+def primefun(n):
+    if n == 1:
+        print('Not a prime')
+        return
+    # get square root of n
+    sqrn = m.ceil(m.sqrt(n))
+    nlist = range(1,sqrn)
+    modlist = []
+    # iterate through 1~sqrt(n)
+    for imod in nlist:
+        if n%imod == 0:
+            modlist.append(imod)
+        if len(modlist)>=2:
+            print('Not prime')
+            return        
+    # check length of modlist
+    if len(modlist)>=2:
+        print('Not prime')
+    else:
+        print('Prime')
+
+for i in range(T):
+    x = int(input())
+    primefun(x)
