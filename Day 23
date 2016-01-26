@@ -1,0 +1,13 @@
+    def levelOrder(self,root):
+        #Write your code here
+        recorder = []
+        currentList = [root]
+        while len(currentList) > 0:
+            childrenList = []
+            for node in currentList:
+                if node is not None:
+                    recorder.append(str(node.data))
+                    childrenList.append(node.left)
+                    childrenList.append(node.right)
+            currentList = childrenList
+        print(' '.join(recorder))
