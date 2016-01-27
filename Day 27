@@ -1,0 +1,44 @@
+T= 5
+print('5')
+print('4 3')
+print('-1 3 0 2')
+print('5 2')
+print('0 -1 2 1 4')
+print('6 3')
+print('0 2 3 1 -2 1')
+print('8 6')
+print('2 0 0 -3 -4 1 -2 0')
+print('7 4')
+print('0 0 4 3 2 1 -1')
+castlist = ['4 3','-1 3 0 2',
+            '5 2','0 -1 2 1 4',
+            '6 3','0 2 3 1 -2 1',
+            '8 6','2 0 0 -3 -4 1 -2 0',
+            '7 4','0 0 4 3 2 1 -1']
+castid = range(0,2*T,2)
+#print(T)
+#for id in castid:
+#    print(castlist[id])
+#    print(castlist[id+1])
+
+'''
+for icase in castid:
+    # get case number
+    ilistkn = castlist[icase]
+    ilistkn = [int(t) for t in ilistkn.split()]
+    N = ilistkn[0]
+    k = ilistkn[1]
+    ilistcase = castlist[icase+1]
+    ilist = [int(t) for t in ilistcase.split()]
+    
+    # compare
+    v = [i<=0 for i in ilist]
+    print(ilist)
+    print(v)
+    vsum = sum(v)
+    if vsum>=k:
+        print('NO')
+    else:
+        print('YES')
+'''    
+    
