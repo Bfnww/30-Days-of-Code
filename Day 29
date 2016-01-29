@@ -1,0 +1,20 @@
+T= int(input())
+def funnyfun(S):
+    rS = S[::-1]
+    num = len(S)
+    for i in range(0,num-2):
+        id1 = i
+        id2 = i-1
+        S1 = ord(S[id1])
+        S2 = ord(S[id2])
+        rS1 = ord(rS[id1])
+        rS2 = ord(rS[id2])
+        if abs(S1-S2) != abs(rS1-rS2):
+            print('Not Funny')
+            return
+    print('Funny')
+    return
+
+for iT in range(0,T):
+    S = input()
+    funnyfun(S)
